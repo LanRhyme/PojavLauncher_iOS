@@ -30,7 +30,7 @@ static BaseAuthenticator *current = nil;
     }
 
     if ([authData[@"expiresAt"] longValue] == 0) {
-        return [[LocalAuthenticator alloc] initWithData:authData];
+        return [[MicrosoftAuthenticator alloc] initWithData:authData];
     } else { 
         return [[MicrosoftAuthenticator alloc] initWithData:authData];
     }
